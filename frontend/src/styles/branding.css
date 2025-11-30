@@ -1,0 +1,15 @@
+@theme {
+    /* BRAND COLORS */
+    --color-primary: #0B2B8B;
+    --color-primary-light: #2E6BFF;
+    --color-primary-dark: #041A63;
+    --color-secondary: #77AFFF;
+    --color-secondary-dark: #64748B;
+    --color-secondary-soft: #F7F9FC;
+    --color-success: #39C178;
+    --color-warning: #FFB258;
+    --color-danger: #E54848;
+    --color-neutral-dark: #1E293B
+}
+
+;
