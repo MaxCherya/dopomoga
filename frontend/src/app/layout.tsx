@@ -1,12 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-
-const APP_NAME = "Online Consultations";
-const APP_DESCRIPTION =
-  "Professional online consultations with psychologists, psychiatrists and personal doctors.";
-const APP_URL = "https://localhost:3000";
-
-const LOGO = "/logo.png";
+import PublicFooter from "@/components/ui/footers/PublicFooter";
+import { APP_DESCRIPTION, APP_NAME, APP_URL, LOGO } from "@/constants/main";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -168,6 +163,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
         {children}
+        <PublicFooter />
       </body>
     </html>
   );
