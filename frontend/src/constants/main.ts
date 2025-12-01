@@ -14,3 +14,11 @@ export const contacts = [
     {type: 'email', value: 'test@medicine.com'},
     {type: 'mobile', value: '+380345523412'}
 ]
+
+export const navItems = [
+    { label: "Головна", path: "/" },
+    { label: "Про нас", path: "/про-нас" },
+    { label: "Послуги", path: "/послуги" },
+    { label: "Блог", path: "/блог" },
+    { label: "Контакти", path: "/контакти" },
+];

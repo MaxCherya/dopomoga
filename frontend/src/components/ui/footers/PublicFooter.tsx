@@ -1,3 +1,5 @@
+'use client';
+
 import { APP_NAME, contacts, LOGO, services } from '@/constants/main'
 import WomenDoctors from '../../../../public/images/women-doctors.png'
 import { Mail, Phone, MoveRight } from 'lucide-react'
@@ -86,7 +88,7 @@ export default function PublicFooter() {
                                         className="w-8 h-8 object-contain drop-shadow-lg rounded-xl"
                                     />
                                 )}
-                                <span className="text-xl font-semibold tracking-wider text-white">
+                                <span className="font-semibold tracking-wider text-gray-300">
                                     {APP_NAME}
                                 </span>
                             </div>

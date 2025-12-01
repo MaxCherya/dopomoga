@@ -2,6 +2,9 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import PublicFooter from "@/components/ui/footers/PublicFooter";
 import { APP_DESCRIPTION, APP_NAME, APP_URL, LOGO } from "@/constants/main";
+import { PublicHeader } from "@/components/ui/headers/PublicHeader";
+import { Provider } from "@/components/ui/provider";
+import { Providers } from "./providers";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -140,7 +143,7 @@ const mainPageJsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="uk" className="scroll-smooth">
+    <html lang="uk" className="scroll-smooth" suppressHydrationWarning>
       <body className="bg-neutral-light antialiased">
         <script
           type="application/ld+json"
@@ -162,8 +165,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
-        {children}
-        <PublicFooter />
+        <Providers>
+          <PublicHeader />
+          {children}
+          <PublicFooter />
+        </Providers>
       </body>
     </html>
   );
