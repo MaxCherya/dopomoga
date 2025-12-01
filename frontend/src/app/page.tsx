@@ -7,13 +7,13 @@ import { Button } from '@chakra-ui/react';
 export default function Home() {
   return (
     <main>
-      <section className="relative w-full min-h-screen bg-primary flex flex-col lg:flex-row items-center justify-center lg:justify-evenly px-6 py-16 overflow-hidden">
+      <section className="relative w-full min-h-[80svh] bg-primary flex flex-col lg:flex-row items-center justify-center lg:justify-evenly overflow-hidden">
 
         {/* ===== CONTENT CONTAINER ===== */}
         <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl mx-auto gap-12 lg:justify-evenly">
 
           {/* TEXT FIRST ON MOBILE, FIRST ON LEFT SIDE ON DESKTOP */}
-          <div className="order-1 lg:order-1 flex flex-col max-w-2xl">
+          <div className="order-1 lg:order-1 flex flex-col max-w-2xl px-4 pt-14">
             <p className="bg-secondary-dark max-w-fit mx-auto lg:mx-0 text-sm flex flex-row items-center gap-4 px-4 py-1 rounded-2xl shadow-md text-secondary-soft"><HeartPulse className="w-4 h-4" /> Медичні консультації</p>
 
             <h1 className="text-5xl font-bold text-white mt-7">Найкращі лікарі,</h1>

@@ -1,4 +1,4 @@
-export const APP_NAME = "Online Consultations";
+export const APP_NAME = "Dopomoga";
 export const APP_DESCRIPTION =
   "Professional online consultations with psychologists, psychiatrists and personal doctors.";
 export const APP_URL = "https://localhost:3000";
@@ -19,6 +19,6 @@ export const navItems = [
     { label: "Головна", path: "/" },
     { label: "Про нас", path: "/про-нас" },
     { label: "Послуги", path: "/послуги" },
-    { label: "Блог", path: "/блог" },
     { label: "Контакти", path: "/контакти" },
+    { label: "Лікарям", path: "/співпраця" },
 ];
