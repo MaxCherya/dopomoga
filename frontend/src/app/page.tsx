@@ -7,6 +7,7 @@ import WomanDoc1 from '../../public/images/doctor-1.png';
 import WomanDoc2 from '../../public/images/doctor-2.png';
 import { motion } from "framer-motion";
 import { StatCard } from '@/components/ui/cards/StatCard';
+import FAQSection from '@/components/ui/faq/FAQSection';
 
 export default function Home() {
   return (
@@ -293,6 +294,10 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
+      </section>
+
+      <section>
+        <FAQSection />
       </section>
     </main>
   );
