@@ -1,18 +1,20 @@
+import { FileCheck, FormInput, PhoneCall, Stethoscope } from "lucide-react";
+
 export const APP_NAME = "Dopomoga";
 export const APP_DESCRIPTION =
-  "Professional online consultations with psychologists, psychiatrists and personal doctors.";
+    "Professional online consultations with psychologists, psychiatrists and personal doctors.";
 export const APP_URL = "https://localhost:3000";
 export const LOGO = "/logo.png";
 
 export const services = [
-    {name: 'Психологія', url: '/психологія'},
-    {name: 'Психіатрія', url: '/психіатрія'},
-    {name: 'Сімейна медицина', url: '/сімейна-медицина'}
+    { name: 'Психологія', url: '/психологія' },
+    { name: 'Психіатрія', url: '/психіатрія' },
+    { name: 'Сімейна медицина', url: '/сімейна-медицина' }
 ]
 
 export const contacts = [
-    {type: 'email', value: 'test@medicine.com'},
-    {type: 'mobile', value: '+380345523412'}
+    { type: 'email', value: 'test@medicine.com' },
+    { type: 'mobile', value: '+380345523412' }
 ]
 
 export const navItems = [
@@ -43,5 +45,33 @@ export const faqs = [
     {
         question: "Які формати консультацій доступні?",
         answer: "Ми пропонуємо відеоконсультації (найпопулярніший формат), текстові консультації в чаті та голосові дзвінки."
+    },
+];
+
+
+export const steps = [
+    {
+        number: "Крок 1",
+        title: "Заповніть форму",
+        description: "Ви заповнюєте форму на сайті",
+        icon: <FormInput className="w-8 h-8" />,
+    },
+    {
+        number: "Крок 2",
+        title: "Зв’яжемося з вами",
+        description: "З вами зв'язуються та назначають час та дату консультації",
+        icon: <PhoneCall className="w-8 h-8" />,
+    },
+    {
+        number: "Крок 3",
+        title: "Консультація з лікарем",
+        description: "Вас консультує кваліфікований лікар",
+        icon: <Stethoscope className="w-8 h-8" />,
+    },
+    {
+        number: "Крок 4",
+        title: "Отримайте висновок",
+        description: "Ви отримуєте детальне медичне заключення",
+        icon: <FileCheck className="w-8 h-8" />,
     },
 ];

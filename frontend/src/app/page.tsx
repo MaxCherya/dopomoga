@@ -1,6 +1,6 @@
 'use client';
 
-import { HeartPulse, Info, MessageCircleMore, ShieldCheck } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Clock, Form, HeartPulse, Info, MessageCircleMore, Phone, ShieldCheck, User } from 'lucide-react';
 import WomanDoctor from '../../public/images/woman-doctor-crossed-arms.png';
 import { Button } from '@chakra-ui/react';
 import WomanDoc1 from '../../public/images/doctor-1.png';
@@ -8,6 +8,8 @@ import WomanDoc2 from '../../public/images/doctor-2.png';
 import { motion } from "framer-motion";
 import { StatCard } from '@/components/ui/cards/StatCard';
 import FAQSection from '@/components/ui/faq/FAQSection';
+import StepsSection from '@/components/ui/steps/StepsSection';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -191,7 +193,7 @@ export default function Home() {
         </div>
       </motion.section>
 
-      <section className="w-full min-h-screen bg-gradient-to-br from-neutral-light via-white to-secondary/20 flex items-center py-36 overflow-hidden">
+      <section className="w-full min-h-screen bg-gradient-to-br from-neutral-light via-white to-secondary/20 flex flex-col items-center py-36 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
 
@@ -294,11 +296,138 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
+
+        <StepsSection />
+
+        <section className="relative w-full mt-32 overflow-hidden bg-transparent">
+
+          <div className="relative max-w-7xl mx-auto px-6 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.9, ease: "easeOut" }}
+              className="space-y-12 lg:space-y-16"
+            >
+              {/* Headline */}
+              <div className="space-y-6">
+                <motion.h1
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="text-5xl font-bold leading-tight tracking-tight"
+                >
+                  Отримайте консультацію лікаря
+                  <br className="hidden sm:block" />
+                  <span className="bg-gradient-to-r from-primary via-blue-500 to-secondary bg-clip-text text-transparent">
+                    вже сьогодні
+                  </span>
+                </motion.h1>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  className="text-lg text-primary-dark max-w-4xl mx-auto leading-relaxed font-light"
+                >
+                  Заповніть форму — ми зв’яжемося з вами{" "}
+                  <span className="font-bold text-blue-600">протягом 30 хвилин</span> і підберемо зручний час
+                </motion.p>
+              </div>
+
+              {/* Benefits - Beautiful glass cards */}
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                variants={{
+                  hidden: { opacity: 0 },
+                  visible: {
+                    opacity: 1,
+                    transition: { staggerChildren: 0.15 },
+                  },
+                }}
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 max-w-6xl mx-auto"
+              >
+                {[
+                  "Без черг та поїздок",
+                  "Кваліфіковані лікарі",
+                  "Офіційне медичне заключення",
+                  "Онлайн з будь-якого міста України чи світу",
+                ].map((benefit, i) => (
+                  <motion.div
+                    key={i}
+                    variants={{
+                      hidden: { opacity: 0, y: 30 },
+                      visible: { opacity: 1, y: 0 },
+                    }}
+                    whileHover={{ y: -4 }}
+                    className="group relative overflow-hidden rounded-2xl bg-secondary-dark backdrop-blur-xl border border-white/40 dark:border-gray-700/50 shadow-xl hover:shadow-2xl transition-all duration-300"
+                  >
+                    <div className="p-6 text-left">
+                      <CheckCircle2 className="w-9 h-9 text-emerald-500 mb-3 group-hover:scale-110 transition-transform" />
+                      <p className="text-base lg:text-lg font-medium text-gray-800 dark:text-gray-100">
+                        {benefit}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
+
+              {/* CTA Button - Premium look */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="mt-16"
+              >
+                <Link
+                  href="#form"
+                  scroll={true}
+                  className="group relative inline-flex items-center gap-5 overflow-hidden rounded-2xl bg-gradient-to-r from-primary to-secondary px-12 py-7 text-xl lg:text-2xl font-bold text-white shadow-2xl transition-all duration-300 hover:shadow-blue-500/50 hover:-translate-y-1"
+                >
+                  <span className="relative z-10">Записатися на консультацію</span>
+                  <ArrowRight className="w-8 h-8 relative z-10 transition-transform group-hover:translate-x-4" />
+
+                  {/* Shine effect */}
+                  <div className="absolute inset-0 -translate-x-full bg-black/20 skew-x-12 transition-transform duration-700 group-hover:translate-x-full" />
+                </Link>
+              </motion.div>
+
+              {/* Trust badges */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.8 }}
+                className="flex flex-col sm:flex-row items-center justify-center gap-8 lg:gap-16 mt-20 text-primary-dark"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="p-4 bg-blue-100 dark:bg-blue-900/50 rounded-full">
+                    <Clock className="w-7 h-7 text-blue-600" />
+                  </div>
+                  <span className="text-lg font-semibold">Відповідь за 30 хвилин</span>
+                </div>
+
+                <div className="hidden sm:block w-px h-16 bg-gradient-to-b from-transparent via-gray-300 to-transparent" />
+
+                <div className="flex items-center gap-4">
+                  <div className="p-4 bg-teal-100 dark:bg-teal-900/50 rounded-full">
+                    <User className="w-7 h-7 text-teal-600" />
+                  </div>
+                  <span className="text-lg font-semibold">Понад 12 000 пацієнтів</span>
+                </div>
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+
       </section>
 
-      <section>
-        <FAQSection />
-      </section>
+      <FAQSection />
     </main>
   );
 }
