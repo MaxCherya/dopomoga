@@ -19,7 +19,7 @@ export const contacts = [
 
 export const navItems = [
     { label: "Головна", path: "/" },
-    { label: "Про нас", path: "/про-нас" },
+    { label: "Про нас", path: "/about" },
     { label: "Послуги", path: "/послуги" },
     { label: "Контакти", path: "/контакти" },
     { label: "Лікарям", path: "/співпраця" },

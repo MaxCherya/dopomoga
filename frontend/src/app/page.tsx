@@ -318,7 +318,7 @@ export default function Home() {
                   transition={{ duration: 0.8, delay: 0.2 }}
                   className="text-5xl font-bold leading-tight tracking-tight"
                 >
-                  Отримайте консультацію лікаря
+                  Отримайте консультацію лікаря {" "}
                   <br className="hidden sm:block" />
                   <span className="bg-gradient-to-r from-primary via-blue-500 to-secondary bg-clip-text text-transparent">
                     вже сьогодні
@@ -385,7 +385,7 @@ export default function Home() {
                 className="mt-16"
               >
                 <Link
-                  href="#form"
+                  href="/booking"
                   scroll={true}
                   className="group relative inline-flex items-center gap-5 overflow-hidden rounded-2xl bg-gradient-to-r from-primary to-secondary px-12 py-7 text-xl lg:text-2xl font-bold text-white shadow-2xl transition-all duration-300 hover:shadow-blue-500/50 hover:-translate-y-1"
                 >
